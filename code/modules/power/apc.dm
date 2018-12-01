@@ -998,7 +998,7 @@
 		malf = null
 	src.occupant.add_spell(new /spell/aoe_turf/corereturn, "grey_spell_ready",/obj/abstract/screen/movable/spell_master/malf)
 	src.occupant.cancel_camera()
-	if (seclevel2num(get_security_level()) == SEC_LEVEL_DELTA)
+	if (seclevel2num(get_security_level()) == SEC_LEVEL_SUPERNOVA)
 		for(var/obj/item/weapon/pinpointer/point in pinpointer_list)
 			point.target = src //the pinpointer will detect the shunted AI
 
@@ -1012,7 +1012,7 @@
 		src.occupant.mind.transfer_to(src.occupant.parent)
 		src.occupant.parent.adjustOxyLoss(src.occupant.getOxyLoss())
 		src.occupant.parent.cancel_camera()
-		if (seclevel2num(get_security_level()) == SEC_LEVEL_DELTA)
+		if (seclevel2num(get_security_level()) == SEC_LEVEL_SUPERNOVA)
 			for(var/obj/item/weapon/pinpointer/point in pinpointer_list)
 				var/mob/living/silicon/ai/A = occupant.parent // the current mob the mind owns
 				if(A.stat != DEAD)
