@@ -465,7 +465,7 @@ rcd light flash thingy on matter drain
 
 /spell/aoe_turf/takeover/cast(var/list/targets, mob/user)
 	command_alert(/datum/command_alert/malf_announce)
-	set_security_level("delta")
+	set_security_level("supernova")
 	var/datum/faction/malf/M = find_active_faction_by_member(user.mind.GetRole(MALF))
 	if(!M)
 		to_chat(user, "<span class='warning'>How did you get to this point without actually being a malfunctioning AI?</span>")
@@ -530,4 +530,3 @@ rcd light flash thingy on matter drain
 		ticker.station_was_nuked = 1
 		ticker.explosion_in_progress = 0
 	return
-
